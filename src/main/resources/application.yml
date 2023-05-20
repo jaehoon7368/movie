@@ -1,0 +1,22 @@
+spring:
+  output:
+    ansi:
+      enable: always
+
+  datasource: #DB ??
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@CRFJN9KBN0THKE3B_high?TNS_ADMIN=/Users/jaehoon/dev/Wallet_CRFJN9KBN0THKE3B
+    username: admin
+    password: Qazqaz7368!!
+
+  jpa:
+    hibernate:
+      ddl-auto: create #?????? ????? ?? ??? ?? ??? ??(drop)? ?? ??
+      database-platform: org.hibernate.dialect.Oracle12cDialect
+    properties:
+      hibernate:
+        format_sql: true
+
+logging: #??? ?? ?? ??
+  level:
+    org.hibernate.SQL: debug #??? ?? hibernate ?? SQL? ???.
