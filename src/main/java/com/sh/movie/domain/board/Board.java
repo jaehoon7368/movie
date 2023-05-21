@@ -1,5 +1,6 @@
 package com.sh.movie.domain.board;
 
+import com.sh.movie.domain.BaseTiemEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
-public class Board {
+public class Board extends BaseTiemEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_board_generator")
@@ -29,5 +30,10 @@ public class Board {
         this.title = title;
         this.content = content;
         this.author = author;
+    }
+
+    public void update(String title, String content){
+        this.title = title;
+        this.content = content;
     }
 }
