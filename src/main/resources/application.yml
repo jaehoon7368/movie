@@ -3,6 +3,7 @@ spring:
     ansi:
       enable: always
 
+
   datasource: #DB ??
     driver-class-name: oracle.jdbc.OracleDriver
     url: jdbc:oracle:thin:@CRFJN9KBN0THKE3B_high?TNS_ADMIN=/Users/jaehoon/dev/Wallet_CRFJN9KBN0THKE3B
