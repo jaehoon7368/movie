@@ -3,11 +3,15 @@ package com.sh.movie.service.board;
 import com.sh.movie.domain.board.Board;
 import com.sh.movie.domain.board.BoardRepository;
 import com.sh.movie.web.dto.BoardDto;
+import com.sh.movie.web.dto.BoardListResponseDto;
 import com.sh.movie.web.dto.BoardResponseDto;
 import com.sh.movie.web.dto.BoardUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Service
@@ -18,6 +22,13 @@ public class BoardService {
     @Transactional
     public Long save(BoardDto boardDto){
         return boardRepository.save(boardDto.toEntity()).getId();
+    }
+
+    @Transactional(readOnly = true)
+    public List<BoardListResponseDto> findAllDesc(){
+        return boardRepository.findAllDesc().stream()
+                .map(BoardListResponseDto::new)
+                .collect(Collectors.toList());
     }
 
     @Transactional

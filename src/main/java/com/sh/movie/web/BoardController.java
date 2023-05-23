@@ -23,7 +23,7 @@ public class BoardController {
         return boardService.update(id, boardDto);
     }
 
-    @GetMapping("/board/{id}")
+    @GetMapping("/boards/{id}")
     public BoardResponseDto findById (@PathVariable Long id){
         return boardService.findById(id);
     }
