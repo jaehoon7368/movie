@@ -28,4 +28,11 @@ public class BoardController {
         return boardService.findById(id);
     }
 
+    @DeleteMapping("/boards/{id}")
+    public Long delete(@PathVariable Long id){
+        boardService.delete(id);
+
+        return id;
+    }
+
 }
