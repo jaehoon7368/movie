@@ -18,6 +18,9 @@ spring:
       hibernate:
         format_sql: true
 
+  profiles:
+    include: oauth
+
 logging: #??? ?? ?? ??
   level:
     org.hibernate.SQL: debug #??? ?? hibernate ?? SQL? ???.

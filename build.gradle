@@ -27,6 +27,10 @@ dependencies {
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.0'
 	//Jpa
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	//Spring Security (소셜 로그인 등 클라이언트 입장에서 소셜 기능 구현 시 필요)
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+	//Session
+	//implementation 'org.springframework.session:spring-session-jdbc'
 	//lombok
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
