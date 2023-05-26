@@ -1,0 +1,17 @@
+spring:
+  jpa:
+    hibernate:
+      database-platform: org.hibernate.dialect.Oracle12cDialect
+    properties:
+      hibernate:
+        format_sql: true
+
+# Test OAuth
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: test
+            client-secret: test
+            scope: profile,email
