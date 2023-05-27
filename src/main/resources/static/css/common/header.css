@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 1% 5%;
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+}
+
+#header-user{
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    text-decoration: none;
+}
+
+#header-user i{
+    font-size: 30px;
+}
