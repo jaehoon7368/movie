@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-header{
+#top-header{
     display: flex;
     justify-content: space-between;
     margin: 1% 5%;
@@ -24,4 +24,23 @@ header a{
 
 #header-user i{
     font-size: 30px;
+}
+
+#sidebox{
+    border-top: 1px solid lightgray;
+    border-bottom: 2px solid red;
+    margin-top: 2%;
+}
+
+#main-sidebar{
+    display: flex;
+    justify-content: space-around;
+    padding: 1% 0;
+    margin-left: 2%;
+    width: 30%;
+    font-size: large;
+}
+
+.sidebar a:active{
+    color: red;
 }

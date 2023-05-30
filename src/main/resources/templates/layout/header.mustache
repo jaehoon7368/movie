@@ -10,25 +10,56 @@
 <body>
     <div id="container">
         <header>
-            <div>
-                <a href="">
-                    <h1>Movie</h1>
-                </a>
-            </div>
-            <div id="header-user">
-                <a href="">
-                    <div>
-                        <i class="fa-solid fa-lock"></i>
-                        <p>로그인</p>
-                    </div>
-                </a>
-                <a href="">
-                    <div>
-                        <i class="fa-regular fa-user"></i>
-                        <p>MY</p>
-                    </div>
-                </a>
-            </div>
+            <div id="top-header">
+                <div>
+                    <a href="/">
+                        <h1>Movie</h1>
+                    </a>
+                </div>
+                <div id="header-user">
+                    {{^userName}}
+                        <a href="/loginPage">
+                            <div>
+                                <i class="fa-solid fa-lock"></i>
+                                <p>로그인</p>
+                            </div>
+                    </a>
+                    {{/userName}}
+                    {{#userName}}
+                        <a href="/logout">
+                            <div>
+                                <i class="fa-solid fa-lock"></i>
+                                <p>로그아웃</p>
+                            </div>
+                        </a>
+                    {{/userName}}
 
+                    <a href="">
+                        <div>
+                            <i class="fa-regular fa-user"></i>
+                            <p>MY</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="sidebox">
+                <div id="main-sidebar">
+                    <div class="sidebar">
+                        <a href="">
+                            <p>영화</p>
+                        </a>
+                    </div>
+                    <div class="sidebar">
+                        <a href="">
+                            <p>예매</p>
+                        </a>
+                    </div>
+                    <div class="sidebar">
+                        <a href="">
+                            <p>스토어</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </header>
     </div>

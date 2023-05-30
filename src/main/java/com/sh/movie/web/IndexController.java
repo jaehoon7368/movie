@@ -26,6 +26,11 @@ public class IndexController {
         return "index";
     }
 
+    @GetMapping("/loginPage")
+    public String loginPage(){
+        return "loginPage";
+    }
+
     @GetMapping("/boards/save")
     public String boardsSave(){
         return "boards-save";
