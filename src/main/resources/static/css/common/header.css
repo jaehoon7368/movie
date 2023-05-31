@@ -44,3 +44,31 @@ header a{
 .sidebar a:active{
     color: red;
 }
+
+#main-container{
+    height: 100%;
+}
+
+#movie-list{
+    width: 60%;
+    margin: 4% auto;
+}
+
+.movie-box{
+    width:25%;
+    height: 400px;
+    display: inline-block;
+    border-radius: 15px;
+    margin: 1% 3%;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+.movie-img{
+    width: 100%;
+    height: 90%;
+    border-radius: 15px;
+    margin-bottom: 3%;
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.4);
+}
