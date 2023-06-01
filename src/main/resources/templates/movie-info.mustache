@@ -1,0 +1,24 @@
+{{>layout/header}}
+<div id="movie-info-box">
+    <img src="/images/{{movie.movieImage}}.png" alt="">
+    <div id="movie-info">
+        <h1>{{movie.title}}</h1>
+        <div id="info-detail">
+            <p>장르 : {{movie.genre}}</p>
+            <p>감독 : {{movie.director}}</p>
+            <p>출연진 : {{movie.actors}}</p>
+            <p>관람가 : {{movie.limitAge}}세 이상</p>
+            <p>상영시간 : {{movie.runningTime}}분</p>
+            <p>개봉 : {{movie.openDate}}</p>
+            <a href="">
+                <div id="reser-btn">
+                    <p>예매하기</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<div id="movie-content">
+    <p>{{movie.intro}}</p>
+</div>
+{{>layout/footer}}

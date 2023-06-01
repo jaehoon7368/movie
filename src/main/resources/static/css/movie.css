@@ -1,0 +1,55 @@
+#movie-info-box{
+
+    display: flex;
+    width: 60%;
+    margin: 5% auto;
+}
+
+#movie-info-box img{
+    width: 30%;
+    height: 400px;
+}
+
+#movie-info{
+    width: 70%;
+    height: 400px;
+    margin-left: 5%;
+    position: relative;
+}
+
+#movie-info h1{
+    padding-bottom: 2%;
+    border-bottom: 1px solid gray;
+}
+
+#movie-info p{
+    margin: 7% 0;
+    font-size: 20px;
+}
+
+#info-detail{
+    position: absolute;
+    bottom: 0;
+}
+
+#info-detail a{
+    text-decoration: none;
+    color: white;
+}
+
+#reser-btn{
+    width: 50%;
+    height: 40px;
+    text-align: center;
+    margin-top: 20%;
+}
+#reser-btn p{
+    background-color: red;
+    width: 100%;
+    padding : 10px;
+    border-radius: 20px;
+}
+
+#movie-content{
+    text-align: center;
+}

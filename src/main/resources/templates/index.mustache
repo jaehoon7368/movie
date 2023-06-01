@@ -3,8 +3,20 @@
 <div id="movie-list">
     {{#movies}}
         <div class="movie-box">
-            <img src="/images/{{movieImage}}.png" alt="" class="movie-img">
             <p>{{title}}</p>
+            <img src="/images/{{movieImage}}.png" alt="" class="movie-img">
+            <div class="index-btn-box">
+                <a href="">
+                    <div id="index-reser-btn">
+                        <p>예매하기</p>
+                    </div>
+                </a>
+                <a href="/movies/{{no}}">
+                    <div class="index-info-btn">
+                        <p>상세정보</p>
+                    </div>
+                </a>
+            </div>
         </div>
     {{/movies}}
 </div>
