@@ -23,8 +23,8 @@
 }
 
 #movie-info p{
-    margin: 7% 0;
-    font-size: 20px;
+    margin: 2% 0;
+    font-size: 18px;
 }
 
 #info-detail{
@@ -52,4 +52,7 @@
 
 #movie-content{
     text-align: center;
+    font-size: 18px;
+    width: 60%;
+    margin: auto;
 }

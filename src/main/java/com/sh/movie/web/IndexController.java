@@ -39,6 +39,11 @@ public class IndexController {
         return "movie-info";
     }
 
+    @GetMapping("/location") //극장찾기
+    public String location(){
+        return "location";
+    }
+
     @GetMapping("/boards/save")
     public String boardsSave(){
         return "boards-save";
