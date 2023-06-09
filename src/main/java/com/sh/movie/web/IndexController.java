@@ -2,6 +2,7 @@ package com.sh.movie.web;
 
 import com.sh.movie.config.auth.LoginUser;
 import com.sh.movie.config.auth.dto.SessionMUser;
+import com.sh.movie.service.cinema.CinemaService;
 import com.sh.movie.service.movie.MovieService;
 import com.sh.movie.web.dto.movie.MovieResponseDto;
 import lombok.RequiredArgsConstructor;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 public class IndexController {
 
     private final MovieService movieService;
+    private final CinemaService cinemaService;
 
     @GetMapping("/")
     public String index(Model model, @LoginUser SessionMUser user){
@@ -40,7 +42,8 @@ public class IndexController {
     }
 
     @GetMapping("/location") //극장찾기
-    public String location(){
+    public String location(Model model){
+        model.addAttribute("cinema",cinemaService.findAll());
         return "location";
     }
 
