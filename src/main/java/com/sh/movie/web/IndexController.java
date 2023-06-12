@@ -47,6 +47,13 @@ public class IndexController {
         return "location";
     }
 
+    @GetMapping("/reservation")
+    public String reservation(Model model){
+        model.addAttribute("movies",movieService.findAllDesc());
+        model.addAttribute("cinemas",cinemaService.findAll());
+        return "reservation";
+    }
+
     @GetMapping("/boards/save")
     public String boardsSave(){
         return "boards-save";

@@ -1,0 +1,124 @@
+#reservation-box{
+    width: 70%;
+    height: 500px;
+    margin: 3% auto 1%;
+    display: flex;
+    background-color:rgb(242, 242, 224);
+}
+
+#reser-movie-box{
+    width: 30%;
+    height: 100%;
+    border: 1px solid lightgray;
+}
+
+#reser-cinema-box {
+    width: 20%;
+    height: 100%;
+    border: 1px solid lightgray;
+}
+
+#reser-date-box {
+    width: 15%;
+    height: 100%;
+    border: 1px solid lightgray;
+}
+
+#reser-time-box {
+    width: 35%;
+    height: 100%;
+    border: 1px solid lightgray;
+}
+
+.reser-title{
+    width: 100%;
+    height: 5%;
+    background-color: rgb(6, 6, 6);
+    color: rgb(234, 234, 234);;
+    text-align: center;
+}
+
+.reser-title p{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 1% 0;
+}
+
+#reser-movieList{
+    width: 90%;
+    margin: 5% 5%;
+}
+.reser-movieTitle p{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 2% 0;
+}
+.reser-movieTitle{
+    display: flex;
+}
+
+.reser-movieTitle img{
+    width: 9%;
+    height: 7%;
+    margin-right: 2%;
+}
+
+#reser-cinemaList{
+    width: 90%;
+    margin: 8% 5%;
+}
+
+#main-reser-box{
+    width: 100%;
+    height: 150px;
+    margin: 1% auto;
+    background-color: black;
+}
+
+#main-reser{
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+}
+
+#main-reser p{
+    font-size: 27px;
+    margin-top: 20%;
+}
+
+#main-reser-movie{
+    width: 20%;
+    height: 80%;
+    color: dimgray;
+    text-align: center;
+    margin-top: 1%;
+}
+
+#main-reser-cinema{
+    width: 20%;
+    height: 80%;
+    color: dimgray;
+    text-align: center;
+    margin-top: 1%;
+    border-left: 2px solid dimgray;
+    border-right: 2px solid dimgray;
+}
+#main-reser-set{
+    width: 20%;
+    height: 80%;
+    color: dimgray;
+    text-align: center;
+    margin-top: 1%;
+}
+#main-reser a{
+    text-decoration: none;
+    color: white;
+}
+#main-reser-set-btn p{
+    background-color: red;
+    width: 100%;
+    padding: 40%;
+    margin-left: 280%;
+    border-radius: 15px;
+}
