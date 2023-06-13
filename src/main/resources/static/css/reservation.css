@@ -19,13 +19,13 @@
 }
 
 #reser-date-box {
-    width: 15%;
+    width: 10%;
     height: 100%;
     border: 1px solid lightgray;
 }
 
 #reser-time-box {
-    width: 35%;
+    width: 40%;
     height: 100%;
     border: 1px solid lightgray;
 }
@@ -51,7 +51,7 @@
 .reser-movieTitle p{
     font-size: 18px;
     font-weight: bold;
-    margin: 2% 0;
+    margin: 1% 0;
 }
 .reser-movieTitle{
     display: flex;
@@ -121,4 +121,81 @@
     padding: 40%;
     margin-left: 280%;
     border-radius: 15px;
+}
+
+#year{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+#month{
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#reser-day{
+    width: 90%;
+    margin: auto;
+    font-size: 20px;
+    text-align: center;
+}
+#reser-day span{
+    font-size: 14px;
+    margin-right: 20%;
+    font-weight: lighter;
+}
+
+#reser-day p{
+    margin: 15% 0;
+    font-weight: bold;
+}
+
+#time-box{
+    width: 90%;
+    margin: 5% auto;
+}
+
+.time-title{
+    width: 100%;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+    font-weight: bold;
+}
+.time-title p{
+    margin-bottom: 1%;
+}
+
+.title-list{
+    width: 100%;
+    margin-top: 3%;
+    display: flex;
+}
+
+.time-set-box{
+    display: flex;
+    width: 30%;
+}
+
+.start-time{
+    width: 40%;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid black;
+}
+.time-set-box p{
+    padding: 5% 0;
+}
+
+.set-leave{
+    color: green;
+    width: 35%;
+    font-size: 13px;
+    margin-top: 5%;
+    margin-left: 3%;
+}
+
+.color-red{
+    color : red;
 }

@@ -29,10 +29,46 @@
         <div class="reser-title">
             <p>날짜</p>
         </div>
+        <div id="reser-day">
+            <div id="year"></div>
+            <div id="month"></div>
+            <div id="day"></div>
+        </div>
     </div>
     <div id="reser-time-box">
         <div class="reser-title">
             <p>시간</p>
+        </div>
+        <div id="time-box">
+            <div class="time-title">
+                <p>1관</p>
+            </div>
+            <div class="title-list">
+                <div class="time-set-box">
+                    <div class="start-time">
+                        <p>18:00</p>
+                    </div>
+                    <div class="set-leave">
+                        <p>100석</p>
+                    </div>
+                </div>
+                <div class="time-set-box">
+                    <div class="start-time">
+                        <p>18:00</p>
+                    </div>
+                    <div class="set-leave">
+                        <p>100석</p>
+                    </div>
+                </div>
+                <div class="time-set-box">
+                    <div class="start-time">
+                        <p>18:00</p>
+                    </div>
+                    <div class="set-leave">
+                        <p>100석</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -56,5 +92,36 @@
 </div>
 </div>
 
+<script>
+    const yearNow = document.querySelector("#year");
+    const monthNow = document.querySelector("#month");
+    const days = document.querySelector("#day");
+
+    let time = new Date();
+
+    let year = time.getFullYear(); //현재 년도
+    let month = time.getMonth(); //현재 달
+    let date = time.getDate(); // 현재 일
+    let day = time.getDay(); //요일
+    let week = ['일', '월', '화', '수', '목', '금', '토'];
+
+    yearNow.innerHTML = `${year}`;
+    monthNow.innerHTML = `${month}`;
+    days.innerHTML = null;
+
+    for(i = 0; i < 10; i++){
+        if(week[day] == '일'){
+            days.innerHTML += `<p class="color-red"><span>${week[day]}</span>${date}</p>`;
+        }else{
+            days.innerHTML += `<p><span>${week[day]}</span>${date}</p>`;
+        }
+        date++;
+        if(day >= 6){
+            day = 0;
+        }else{
+            day++;
+        }
+    }
+</script>
 
 {{>layout/footer}}
