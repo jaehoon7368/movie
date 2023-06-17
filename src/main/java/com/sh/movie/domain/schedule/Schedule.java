@@ -20,12 +20,18 @@ public class Schedule {
     private Long no;
 
     @ManyToOne
-    @JoinColumn(name="movie_no",nullable = false)
+    @JoinColumn(name="movie_no",insertable = false, updatable = false)
     private Movie movie;
 
+    @Column(name="movie_no")
+    private Long movieNo;
+
     @ManyToOne
-    @JoinColumn(name="theater_no",nullable = false)
+    @JoinColumn(name="theater_no",insertable = false, updatable = false)
     private Theater theater;
+
+    @Column(name="theater_no")
+    private Long theaterNo;
 
     @Column(nullable = false)
     private LocalDateTime startTime;
@@ -34,9 +40,9 @@ public class Schedule {
     private LocalDateTime endTime;
 
     @Builder
-    public Schedule(Movie movie, Theater theater, LocalDateTime startTime, LocalDateTime endTime){
-        this.movie = movie;
-        this.theater = theater;
+    public Schedule(Long movieNo, Long theaterNo, LocalDateTime startTime, LocalDateTime endTime){
+        this.movieNo = movieNo;
+        this.theaterNo = theaterNo;
         this.startTime = startTime;
         this.endTime = endTime;
     }

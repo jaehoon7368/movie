@@ -1,0 +1,70 @@
+#mypage-container{
+    display: flex;
+    margin: 2% 5%;
+}
+
+#mypage-sidebar{
+    width: 10%;
+    margin-left: 7%;
+}
+
+#mypage-sidebar a{
+    text-decoration: none;
+    color: initial;
+}
+
+
+.div-sidebar{
+    text-align: center;
+    font-size: 18px;
+    padding: 5% 0;
+}
+
+.div-sidebar a:active,
+.div-sidebar a:focus {
+    background-color: red;
+    color: white;
+}
+
+#mypage-main{
+    width: 70%;
+}
+#mypage-main h2{
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+#div-schedule{
+    width: 60%;
+    font-size: 18px;
+    margin: auto;
+}
+
+#scheduleTable{
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+#scheduleTable tr,td{
+    border: 1px solid black;
+    padding: 2%;
+}
+
+#scheduleTable select,input{
+    font-size: 18px;
+}
+
+#schedule-btn-div{
+    width: 10%;
+    margin: 2% auto;
+}
+
+#div-schedule button{
+    padding: 10% 20%;
+    margin: 1% auto;
+}
+
+.backcolor-schedule{
+    background-color: rgb(242, 242, 224);
+}

@@ -30,4 +30,5 @@ public class MovieService {
 
         return new MovieResponseDto(entity);
     }
+
 }

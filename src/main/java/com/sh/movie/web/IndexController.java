@@ -4,6 +4,7 @@ import com.sh.movie.config.auth.LoginUser;
 import com.sh.movie.config.auth.dto.SessionMUser;
 import com.sh.movie.service.cinema.CinemaService;
 import com.sh.movie.service.movie.MovieService;
+import com.sh.movie.service.theater.TheaterService;
 import com.sh.movie.web.dto.movie.MovieResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -17,6 +18,7 @@ public class IndexController {
 
     private final MovieService movieService;
     private final CinemaService cinemaService;
+    private final TheaterService theaterService;
 
     @GetMapping("/")
     public String index(Model model, @LoginUser SessionMUser user){
@@ -52,6 +54,13 @@ public class IndexController {
         model.addAttribute("movies",movieService.findAllDesc());
         model.addAttribute("cinemas",cinemaService.findAll());
         return "reservation";
+    }
+
+    @GetMapping("/admin")
+    public String admin(Model model){
+        model.addAttribute("theaters",theaterService.findAll());
+        model.addAttribute("movies",movieService.findAllDesc());
+        return "schedule-save";
     }
 
     @GetMapping("/boards/save")

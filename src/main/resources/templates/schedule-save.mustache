@@ -1,0 +1,68 @@
+{{>layout/header}}
+{{>layout/mypage-sidebar}}
+<h2>상영 관리</h2>
+
+<div id="div-schedule">
+    <form action="/admin/schedule-save" method="post" name="insertScheduleFrm">
+        <table id="scheduleTable" name="scheduleTable">
+            <tr>
+                <td class="backcolor-schedule">상영관</td>
+                <td>
+                    <select name="theaterNo">
+                        {{#theaters}}
+                            <option value="{{no}}">{{cinema.name}} {{theaterNo}}관</option>
+                        {{/theaters}}
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="backcolor-schedule">영화</td>
+                <td>
+                    <select name="movieNo">
+                        {{#movies}}
+                            <option value="{{no}}" data-running-time="{{runningTime}}">{{title}}</option>
+                        {{/movies}}
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="backcolor-schedule">시작 시간</td>
+                <td>
+                    <input type="datetime-local" name="startTime" id="startTime" onchange="calculateEndTime()">
+                </td>
+            </tr>
+            <tr>
+                <td class="backcolor-schedule">종료 시간</td>
+                <td>
+                    <input type="datetime-local" name="endTime" id="endTime">
+                </td>
+            </tr>
+        </table>
+        <div id="schedule-btn-div">
+            <button type="submit">등록</button>
+        </div>
+    </form>
+</div>
+
+<script>
+function calculateEndTime() {
+    var movieSelect = document.querySelector('select[name="movieNo"]');
+    var runningTimeInput = movieSelect.options[movieSelect.selectedIndex].getAttribute('data-running-time');
+    var startTimeInput = document.getElementById('startTime');
+    var endTimeInput = document.getElementById('endTime');
+
+    console.log(runningTimeInput);
+
+    var runningTime = parseInt(runningTimeInput);
+    var startTime = new Date(startTimeInput.value);
+
+    if (!isNaN(runningTime) && !isNaN(startTime)) {
+        var endTime = new Date(startTime.getTime() + (runningTime * 1000) + (9 * 60 * 60 * 1000)); // 계산된 종료 시간 (밀리초 단위)
+        endTimeInput.value = endTime.toISOString().slice(0, 16); // ISO 형식(yyyy-mm-ddThh:mm)으로 변환하여 입력
+    }
+    console.log("startTime", startTime.getTime());
+    console.log(runningTimeInput);
+    console.log("endTime", endTime);
+    console.log("endTimeInput.value",endTimeInput.value);
+}
+</script>
